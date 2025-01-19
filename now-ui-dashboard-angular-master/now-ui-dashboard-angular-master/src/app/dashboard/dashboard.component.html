@@ -1,0 +1,41 @@
+<div class="panel-header panel-header-lg">
+  <canvas baseChart id="bigDashboardChart"
+          [datasets]="lineBigDashboardChartData"
+          [labels]="lineBigDashboardChartLabels"
+          [colors]="lineBigDashboardChartColors"
+          [options]="lineBigDashboardChartOptions"
+          [chartType]="lineBigDashboardChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Sentiment Analysis</h5>
+          <h4 class="card-title">Tweet Sentiment Scores</h4>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas baseChart id="lineChartExample"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [colors]="lineChartColors"
+                    [options]="lineChartOptions"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ajoutez d'autres cartes pour afficher plus de graphiques si nécessaire -->
+  </div>
+</div>
